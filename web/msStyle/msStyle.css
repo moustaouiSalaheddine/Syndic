@@ -1,0 +1,110 @@
+.appart span {
+    font-size: 18px;
+    color: #e7505a;
+    font-weight: bold;
+}
+.appart {
+    margin: 25px;
+    float: left;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+[data-drop-target] {
+    background-color: gainsboro;
+    min-height: 400px;
+    width: 200px;
+    padding-bottom: 5px;
+}
+.drag-enter {
+    border: 2px dashed #000;
+}
+.ms-box{
+    width: 185px;
+    height: 50px;
+    margin: 5px;
+    line-height: 45px;
+    text-align: center;
+    border: 2px solid #c49f47;
+    color: #c49f47;
+    background-color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.box:nth-child(3) {
+    clear: both;
+}
+
+
+.appartements input{
+    padding-left: 10px;
+    padding-right: 5px;  
+    font-size: 12px;  
+}
+.ms-box{
+    height: auto;
+}
+
+button.btn.btn-default {
+    background-color: white;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+}
+
+
+button.btn.btn-default:hover {
+    background-color: #e1e1d0;
+    border: 1px solid #afafaf;
+    border-radius: 5px;
+}
+
+h4.modal-title {
+    position: absolute;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #ebedf2;
+    border-radius: 0.3rem;
+    outline: 0;
+}
+.ms-delete {
+    position: absolute;
+    float: right;
+    margin-left: 165px;
+    margin-top: -94px;
+    background: red;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    color: white;
+    border-radius: 50%;
+}
+.ms-delete:hover {
+    color: black;
+    background-color: #e60202;
+}
+.ms-more {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 25px;
+    position: absolute;
+    color: white;
+    bottom: 35px;
+    background: #91a914;
+}
