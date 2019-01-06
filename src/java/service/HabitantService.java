@@ -172,7 +172,24 @@ public class HabitantService implements IDao<Habitant> {
             return Habitants;
         }
     }
-    
+    public Habitant Login(String email) {
+        Habitant Habitants = null;
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction tx = null;
+        try {
+            tx = session.beginTransaction();
+            Habitants = (Habitant) session.createQuery("SELECT h from Habitant h WHERE h.email=?").setParameter(0, email).uniqueResult();
+            tx.commit();
+            session.close();
+            return Habitants;
+        } catch (HibernateException ex) {
+            if (tx != null) {
+                tx.rollback();
+            }
+            session.close();
+            return Habitants;
+        }
+    }
 
 }
 

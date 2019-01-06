@@ -1,4 +1,15 @@
-
+<%@page import="beans.Habitant"%>
+<%
+    
+    HttpSession httpSession = request.getSession(false);
+//False because we do not want it to create a new session if it does not exist.
+    Habitant user = null;
+    if (httpSession != null) {
+        user = (Habitant) httpSession.getAttribute("user");
+    }
+    
+        System.out.println("user name : : : "+user.getNom());
+%>
 <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
     <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
         <a class="navbar-brand brand-logo" href="Template/index.html"><img src="Template/images/logo.svg" alt="logo"/></a>
@@ -23,7 +34,9 @@
                         <span class="availability-status online"></span>             
                     </div>
                     <div class="nav-profile-text">
-                        <p class="mb-1 text-black">David Greymaax</p>
+                        <p class="mb-1 text-black">
+                            <%= user.getNom() %> <%= user.getPrenom()%>
+                        </p>
                     </div>
                 </a>
                 <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
@@ -32,7 +45,7 @@
                         Activity Log
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">
+                    <a class="dropdown-item"  id="signOut" href="#">
                         <i class="mdi mdi-logout mr-2 text-primary"></i>
                         Signout
                     </a>

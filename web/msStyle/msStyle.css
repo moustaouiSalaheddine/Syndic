@@ -108,3 +108,17 @@ h4.modal-title {
     bottom: 35px;
     background: #91a914;
 }
+.emailError {
+    position: relative;
+    color: red;
+    margin-left: 15px;
+    top: 10px;
+    display: none;
+}
+.passwordError {
+    position: relative;
+    color: red;
+    margin-left: 15px;
+    top: 10px;
+    display: none;
+}
